@@ -11,3 +11,10 @@ class Mda(models.Model):
 
     def __str__(self):
         return self.mda_name
+
+
+class Displaydata(models.Model):
+    adminCode = models.CharField(max_length=12)
+    adminName = models.CharField(max_length=200)
+    sectorCode = models.CharField(max_length=12)
+    sectorName = models.CharField(max_length=200)

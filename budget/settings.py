@@ -32,12 +32,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    # 'FunctionsConfig.apps.PagesConfig',
-    # 'FundsConfig.apps.PagesConfig',
-    # 'LocationsConfig.apps.PagesConfig',
-    # 'ProgrammesConfig.apps.PagesConfig',
-    # 'ZonesConfig.apps.PagesConfig',
-    # 'CapitalReceiptsConfig.apps.PagesConfig',
+    'functions.apps.FunctionsConfig',
+    'funds.apps.FundsConfig',
+    'locations.apps.LocationsConfig',
+    'programmes.apps.ProgrammesConfig',
+    'zones.apps.ZonesConfig',
+    'capital_receipts.apps.CapitalReceiptsConfig',
+    'fund_groups.apps.FundGroupsConfig',
+    'function_groups.apps.FunctionGroupsConfig',
     'pages.apps.PagesConfig',
     'capitals.apps.CapitalsConfig',
     'revenues.apps.RevenuesConfig',
@@ -96,10 +98,10 @@ WSGI_APPLICATION = 'budget.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'budget',
-        'USER': 'postgres',
-        'PASSWORD': 'Supreme123@',
+        'USER': 'root',
+        'PASSWORD': '',
         'HOST': 'localhost'
     }
 }

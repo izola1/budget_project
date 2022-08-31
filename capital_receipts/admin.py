@@ -1,3 +1,4 @@
 from django.contrib import admin
+from .models import Capital_Receipt
 
-# Register your models here.
+admin.site.register(Capital_Receipt)

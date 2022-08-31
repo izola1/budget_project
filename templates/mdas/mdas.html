@@ -11,13 +11,30 @@
     <thead>
       <tr>
         <th>Admin Code</th>
-        <th>Name</th>
-        <th>Sector</th>
-        <th>Subsector</th>
+        <th>MDA Name</th>
+        <th>Sector Code</th>
+        <th>Sector Name</th>
       </tr>
     </thead>
     <tbody>
-      {% if mdas %} {% for mda in mdas %}
+
+      {% if Displaydata %} {% for Displaydata in Displaydata %}
+      <tr>
+        <td>{{Displaydata.0}}</td>
+        <td> {{Displaydata.1}}</a></td>
+        <td>{{Displaydata.2}}</td>
+        <td>{{Displaydata.3}}</td>
+      </tr>
+      {%endfor%} {% else %}
+      <div class="col-md-12"><p>No MDAs Available</p></div>
+      {% endif %}
+
+
+
+
+
+
+      {% comment %} {% if mdas %} {% for mda in mdas %}
       <tr>
         <td>{{mda.admin_code}}</td>
         <td><a href="{% url 'mda' mda.id %}"> {{mda.mda_name}}</a></td>
@@ -26,14 +43,14 @@
       </tr>
       {%endfor%} {% else %}
       <div class="col-md-12"><p>No MDAs Available</p></div>
-      {% endif %}
+      {% endif %} {% endcomment %}
     </tbody>
     <tfoot>
       <tr>
         <th>Admin Code</th>
         <th>Name</th>
-        <th>Sector</th>
-        <th>Subsector</th>
+        <th>Sector Code</th>
+        <th>Sector Name</th>
       </tr>
     </tfoot>
   </table>

@@ -8,4 +8,4 @@ class Economic_Item(models.Model):
     ipsas_title = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.ipsas_code, self.ipsas_title
+        return f'{self.ipsas_code} {self.ipsas_title}'

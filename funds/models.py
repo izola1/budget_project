@@ -8,4 +8,4 @@ class Fund(models.Model):
     description = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.fund_code, self.description
+        return f'{self.fund_code} {self.description}'

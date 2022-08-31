@@ -6,4 +6,4 @@ class Fund_Group(models.Model):
     description = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.group_code, self.description
+        return f'{self.group_code} {self.description}'

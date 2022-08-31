@@ -9,6 +9,7 @@ class Capital_Receipt(models.Model):
     admin_code = models.ForeignKey(Mda, on_delete=models.CASCADE)
     ipsas_code = models.ForeignKey(Economic_Item, on_delete=models.CASCADE)
     eco_code = models.ForeignKey(Economic_Group, on_delete=models.CASCADE)
+    fund_code = models.ForeignKey(Fund, on_delete=models.CASCADE)
     appr_prev = models.DecimalField(
         default=0.00, max_digits=17, decimal_places=2)
     actual_prev = models.DecimalField(

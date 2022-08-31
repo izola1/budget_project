@@ -6,4 +6,4 @@ class Zone(models.Model):
     zone = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.zone_code, self.zone
+        return f'{self.zone_code} {self.zone}'

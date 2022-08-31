@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
+from mdas import views
 
 urlpatterns = [
     path('', include('pages.urls')),
@@ -27,4 +28,5 @@ urlpatterns = [
     path('mdas/', include('mdas.urls')),
     path('accounts/', include('accounts.urls')),
     path('admin/', admin.site.urls),
+    path('', views.tablesjoin),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
