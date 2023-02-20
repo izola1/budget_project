@@ -33,6 +33,9 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'functions.apps.FunctionsConfig',
+    'expenditures.apps.ExpendituresConfig',
+    'expenditure_items.apps.ExpenditureItemsConfig',
+    'revenue_items.apps.RevenueItemsConfig',
     'funds.apps.FundsConfig',
     'locations.apps.LocationsConfig',
     'programmes.apps.ProgrammesConfig',
@@ -49,6 +52,7 @@ INSTALLED_APPS = [
     'sectors.apps.SectorsConfig',
     'subsectors.apps.SubsectorsConfig',
     'economic_groups.apps.EconomicGroupsConfig',
+    'rev_groups.apps.RevGroupsConfig',
     'economic_items.apps.EconomicItemsConfig',
     'ranks.apps.RanksConfig',
     'departments.apps.DepartmentsConfig',

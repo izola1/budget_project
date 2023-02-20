@@ -25,6 +25,6 @@ def search(request):
 
 def tablesjoin(request):
     cursor = connection.cursor()
-    cursor.execute("select mdas_mda.admin_code, mdas_mda.mda_name, sectors_sector.sector_code,  sectors_sector.name from mdas_mda join sectors_sector on sectors_sector.id = mdas_mda.sector_id ")
+    cursor.execute("select mdas_mda.admin_code, mdas_mda.mda_name, sectors_sector.sector_code,  sectors_sector.sector_name from mdas_mda join sectors_sector on sectors_sector.id = mdas_mda.sector_id ")
     result = cursor.fetchall()
     return render(request, 'mdas/mdas.html', {'Displaydata': result})

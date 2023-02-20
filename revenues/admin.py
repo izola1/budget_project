@@ -3,10 +3,12 @@ from .models import Revenue
 
 
 class RevenueAdmin(admin.ModelAdmin):
-    list_display = ('id', 'admin_code', 'mda_name', 'sector', 'subsector')
-    list_display_links = ('admin_code', 'mda_name')
-    list_filter = ('sector', )
-    list_per_page = (25)
+    list_display = ('admin_code_id',
+                    'appr_prev', 'actual_prev', 'proposed_curr',)
+    list_display_links = ('admin_code_id',)
+    list_filter = ('admin_code', )
+    list_per_page = (15)
+    search_fields = ['admin_code__mda_name']
 
 
-admin.site.register(Revenue)
+admin.site.register(Revenue, RevenueAdmin)
