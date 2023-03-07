@@ -46,5 +46,17 @@ class Capital_Receipt(models.Model):
         default=0.00, max_digits=17, decimal_places=2)
 
     def __str__(self):
-        # return self.admin_code, self.ipsas_code, self.appr_prev, self.actual_prev, self.proposed_curr
-        return f'{self.admin_code} {self.ipsas_code} {self.appr_prev} {self.actual_prev} {self.proposed_curr}'
+        return f'{self.admin_code}'
+        # return f'{self.admin_code} {self.ipsas_code} {self.appr_prev} {self.actual_prev} {self.proposed_curr}'
+
+
+class CapitalReceiptdata(models.Model):
+    adminCode = models.CharField(max_length=12)
+    adminName = models.CharField(max_length=200)
+    ipsasCode = models.CharField(max_length=8)
+    ecoName = models.CharField(max_length=300)
+    fundCode = models.CharField(max_length=5)
+    fundName = models.CharField(max_length=200)
+    appr = models.DecimalField(default=0.00, max_digits=17, decimal_places=2)
+    actual = models.DecimalField(default=0.00, max_digits=17, decimal_places=2)
+    prop = models.DecimalField(default=0.00, max_digits=17, decimal_places=2)

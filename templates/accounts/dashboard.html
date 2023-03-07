@@ -68,7 +68,7 @@
           <div class="col-md-2 mt-2">
             <a href="{% url 'mdas'  %}">
             <div class="card text-center bg-dark text-white mb-3">
-              <div class="card-body">
+              <div style = {width: 50px, height: 50px}class="card-body">
                 <h1 class="lead">MDA</h1>
                 <h1 class="display-5">
                   <i class="fa fa-building" aria-hidden="true"></i>
@@ -78,7 +78,7 @@
             </a>
           <a href="{% url 'revenues'  %}">
             <div class="card text-center bg-dark text-white mb-3">
-              <div class="card-body">
+              <div style = "width: 140px; height: 105px" class="card-body">
                 <h1 class="lead">REVENUE</h1>
                 <h1 class="display-5">
                   <i class="fa fa-book" aria-hidden="true"></i>
@@ -88,7 +88,7 @@
           </a>
           <a href="{% url 'overheads'  %}">
             <div class="card text-center bg-dark text-white mb-3">
-              <div class="card-body">
+              <div style = "width: 140px; height: 105px" class="card-body">
                 <h1 class="lead">OVERHEAD</h1>
                 <h1 class="display-5">
                   <i class="fa fa-calendar" aria-hidden="true"></i>
@@ -98,7 +98,7 @@
           </a>
             <a href="{% url 'capitals'  %}">
             <div class="card text-center bg-dark text-white mb-3">
-              <div class="card-body">
+              <div style = "width: 140px; height: 105px" class="card-body">
                 <h1 class="lead">CAPITAL</h1>
                 <h1 class="display-5">
                   <i class="fa fa-calculator" aria-hidden="true"></i>
@@ -108,7 +108,7 @@
           </a>
           <a href="{% url 'personnels'  %}">
             <div class="card text-center bg-dark text-white mb-3">
-              <div class="card-body">
+              <div style = "width: 145px; height: 105px" class="card-body">
                 <h1 class="lead">PERSONNEL</h1>
                 <h1 class="display-5">
                   <i class="fa fa-users" aria-hidden="true"></i>
@@ -116,6 +116,16 @@
               </div>
             </div>
           </a>
+          <a href="{% url 'capital_receipts'  %}">
+            <div class="card text-center bg-dark text-white mb-3">
+              <div style = "width: 140px; height: 123px" class="card-body">
+                <h1 class="lead">CAPITAL RECEIPTS</h1>
+                <h1 class="display-5">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                </h1>
+              </div>
+            </div>
+            </a>
           </div>
         {% comment %} </div> {% endcomment %}
       <div class="col-md-10 mt-2 mb-3">

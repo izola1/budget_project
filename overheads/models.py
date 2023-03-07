@@ -52,7 +52,7 @@ class Overhead(models.Model):
         default=0.00, max_digits=17, decimal_places=2)
 
     def __str__(self):
-        return self.admin_code, self.ipsas_code, self.appr_prev, self.actual_prev, self.proposed_curr, self.proposed_next
+        return f'{self.admin_code, self.ipsas_code, self.appr_prev, self.actual_prev, self.proposed_curr, self.proposed_next}'
 
 
 class Overheaddata(models.Model):

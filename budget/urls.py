@@ -23,6 +23,7 @@ urlpatterns = [
     path('', include('pages.urls')),
     path('capitals/', include('capitals.urls')),
     path('revenues/', include('revenues.urls')),
+    path('capitalreceipts/', include('capital_receipts.urls')),
     path('overheads/', include('overheads.urls')),
     path('personnels/', include('personnels.urls')),
     path('mdas/', include('mdas.urls')),

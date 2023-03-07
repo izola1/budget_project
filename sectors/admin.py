@@ -7,6 +7,7 @@ class SectorAdmin(admin.ModelAdmin):
     list_display_links = ('id', 'sector_code', 'sector_name')
     list_filter = ('sector_code', 'sector_name', )
     list_per_page = (25)
+    ordering = ('id',)
 
 
 admin.site.register(Sector, SectorAdmin)

@@ -11,6 +11,7 @@ class Mda(models.Model):
 
     def __str__(self):
         return f"{self.mda_name}"
+        # return self.mda_name
 
 
 class Displaydata(models.Model):

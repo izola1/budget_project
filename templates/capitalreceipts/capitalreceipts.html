@@ -1,0 +1,76 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container mb-3 mt-3">
+  <h2 class="text-center">Details of Capital Receipts</h2>
+
+  <table 
+  id="table_id"
+  class="table table-striped table-bordered display"
+  style="width: 100%;"
+>
+  <thead>
+    <tr>
+      <th>Admin Code</th>
+      <th>MDA Name</th>
+      <th>Ipsas Title</th>
+      <th>Economic Code</th>
+      <th>Fund Code</th>
+      <th>2022 Approved Budget</th>
+      <th>2022 Performance Jan - Sept</th>
+      <th>2023 Propose Budget</th>
+    </tr>
+  </thead>
+  <tbody>
+ {% if CapitalReceiptdata %} {% for CapitalReceiptdata in CapitalReceiptdata %}
+    <tr>
+      <td> {{CapitalReceiptdata.0}}</a></td>
+      <td>{{CapitalReceiptdata.1}}</td>
+      <td>{{CapitalReceiptdata.3}}</td>
+      <td>{{CapitalReceiptdata.2}}</td>
+      <td>{{CapitalReceiptdata.4}}</td>
+      <td>{{CapitalReceiptdata.6}}</td>
+      <td>{{CapitalReceiptdata.7}}</td>
+      <td>{{CapitalReceiptdata.8}}</td>
+    </tr>
+    {%endfor%} {% else %}
+    <div class="col-md-12"><p>No Revenue data Available</p></div>
+    {% endif %} 
+
+
+
+
+
+
+    {% comment %} {% if capitals %} {% for capital in capitals %}
+    <tr>
+      <td>{{capital.prog_code_id  }}</td>
+      <td><a href="{% url 'mda' mda.id %}"> {{capital.admin_code_id }}</a></td>
+      <td>{{capital.eco_code_id }}</td>
+      <td>{{capital.func_code_id }}</td>
+      <td>{{capital.fund_code_id }}</td>
+      <td>{{capital.admin_code_id }}</td>
+      <td>{{capital.admin_code_id }}</td>
+      <td>{{capital.admin_code_id }}</td>
+      <td>{{capital.admin_code_id }}</td>
+      <td>{{capital.admin_code_id }}</td>
+    </tr>
+    {%endfor%} {% else %}
+    <div class="col-md-12"><p>No MDAs Available</p></div>
+    {% endif %}  {% endcomment %}
+  </tbody>
+  <tfoot>
+    <tr>
+      
+      <th>Admin Code</th>
+      <th>MDA Name</th>
+      <th>Ipsas Title</th>
+      <th>Economic Code</th>
+      <th>Fund Code</th>
+      <th>2022 Approved Budget</th>
+      <th>2022 Performance Jan - Sept</th>
+      <th>2023 Propose Budget</th>
+    </tr>
+  </tfoot>
+</table>
+</div>
+{% endblock %}

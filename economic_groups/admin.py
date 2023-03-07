@@ -7,6 +7,7 @@ class Economic_groupAdmin(admin.ModelAdmin):
     list_display_links = ('eco_code', 'group_title')
     list_filter = ('group_type', )
     list_per_page = (25)
+    ordering = ('id',)
     search_fields = ('group_title',)
 
 

@@ -63,7 +63,7 @@ class Personnels(models.Model):
         default=0.00, max_digits=17, decimal_places=2)
 
     def __str__(self):
-        return self.admin_code, self.ipsas_code, self.func_code, self.fund_code, self.loc_code,
+        return f'{self.admin_code, self.ipsas_code, self.func_code, self.fund_code, self.loc_code,}'
        # return self.mdas_id, self.departments_id, self.rank_id, self.sector_id, self.appr_num_staff, self.actual_num_staff, self.prop_num_staff
 
 

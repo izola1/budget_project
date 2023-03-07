@@ -7,6 +7,7 @@ class MdaAdmin(admin.ModelAdmin):
     list_display_links = ('admin_code', 'mda_name')
     list_filter = ('sector', )
     list_per_page = (25)
+    ordering = ('id',)
     search_fields = ('mda_name',)
 
 
